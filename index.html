@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>永远怀念爷爷</title>
+  <meta name="description" content="谨以此页，纪念我们最爱的爷爷。" />
+  <style>
+    :root {
+      --bg: #f7efe5;
+      --paper: rgba(255, 250, 243, 0.88);
+      --text: #3e2f26;
+      --muted: #7a6658;
+      --gold: #b98643;
+      --deep: #5d3b29;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.75), transparent 38%),
+        linear-gradient(135deg, #f5e6d3 0%, #fbf4ea 45%, #ead5bd 100%);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 28px 18px 54px; }
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 28px 0;
+    }
+    .card {
+      width: 100%;
+      background: var(--paper);
+      border: 1px solid rgba(185,134,67,.22);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(93,59,41,.14);
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+    .cover {
+      position: relative;
+      min-height: 460px;
+      display: grid;
+      place-items: end center;
+      overflow: hidden;
+      background: #e9d4bd;
+    }
+    .cover img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.4s ease;
+    }
+    .cover img.active { opacity: 1; }
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(25,15,8,.08), rgba(25,15,8,.22), rgba(25,15,8,.68));
+    }
+    .title-box {
+      position: relative;
+      z-index: 2;
+      padding: 0 22px 42px;
+      color: #fffaf4;
+      text-shadow: 0 2px 16px rgba(0,0,0,.38);
+    }
+    h1 { margin: 0; font-size: clamp(2.3rem, 8vw, 4.8rem); letter-spacing: .08em; font-weight: 700; }
+    .subtitle { margin-top: 16px; font-size: clamp(1.05rem, 3.4vw, 1.55rem); line-height: 1.8; }
+    .content { padding: 34px 24px 42px; }
+    .quote {
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 2.05;
+      font-size: 1.08rem;
+      text-align: center;
+      color: var(--deep);
+    }
+    .divider {
+      width: 70px;
+      height: 2px;
+      background: var(--gold);
+      opacity: .55;
+      margin: 32px auto;
+    }
+    .section-title { text-align: center; margin: 0 0 20px; font-size: 1.5rem; color: var(--deep); }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(93,59,41,.12);
+      background: #ead5bd;
+    }
+    .music {
+      margin: 34px auto 0;
+      max-width: 640px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.54);
+      border: 1px solid rgba(185,134,67,.2);
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .music strong { color: var(--deep); }
+    audio { width: 100%; margin-top: 14px; }
+    .note { margin-top: 14px; font-size: .94rem; color: var(--muted); }
+    footer { text-align: center; margin-top: 26px; color: var(--muted); font-size: .95rem; }
+    @media (max-width: 620px) {
+      .wrap { padding: 14px 10px 36px; }
+      .cover { min-height: 74vh; }
+      .content { padding: 28px 16px 34px; }
+      .gallery img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <article class="card">
+        <div class="cover" id="slideshow">
+          <img src="assets/images/09661086-E232-454B-8BBF-50485B9D28DF.jpeg" class="active" alt="爷爷的照片">
+          <img src="assets/images/16DF9636-59AD-4D8B-80C4-A303958AC263.jpeg" alt="爷爷的照片">
+          <img src="assets/images/740793FD-D700-47E6-9DF8-58E88B3C3FE4.jpeg" alt="爷爷的照片">
+          <img src="assets/images/880C9508-1922-4E4F-B913-4F18B62F2848.jpeg" alt="爷爷的照片">
+          <img src="assets/images/EB493CC4-8C58-4F0F-A719-9EC2A4E4A25E.jpeg" alt="爷爷的照片">
+          <img src="assets/images/EC733862-80E3-4699-95B5-298382B225F5.jpeg" alt="爷爷的照片">
+          <img src="assets/images/EC8128DA-5A25-44CC-8D09-D3D1222A4132.jpeg" alt="爷爷的照片">
+          <div class="title-box">
+            <h1>永远怀念爷爷</h1>
+            <div class="subtitle">感谢您来过，感谢您爱过，感谢您留给我们的所有美好时光。</div>
+          </div>
+        </div>
+        <div class="content">
+          <p class="quote">
+            人生有尽，思念无期。<br>
+            感谢您陪伴家人走过的每一个春夏秋冬。<br>
+            那些关于您的故事、笑容与爱，<br>
+            将永远留在家人的记忆里。
+          </p>
+          <div class="divider"></div>
+          <h2 class="section-title">时光相册</h2>
+          <div class="gallery">
+            <img src="assets/images/09661086-E232-454B-8BBF-50485B9D28DF.jpeg" alt="爷爷的照片">
+            <img src="assets/images/16DF9636-59AD-4D8B-80C4-A303958AC263.jpeg" alt="爷爷的照片">
+            <img src="assets/images/740793FD-D700-47E6-9DF8-58E88B3C3FE4.jpeg" alt="爷爷的照片">
+            <img src="assets/images/880C9508-1922-4E4F-B913-4F18B62F2848.jpeg" alt="爷爷的照片">
+            <img src="assets/images/EB493CC4-8C58-4F0F-A719-9EC2A4E4A25E.jpeg" alt="爷爷的照片">
+            <img src="assets/images/EC733862-80E3-4699-95B5-298382B225F5.jpeg" alt="爷爷的照片">
+            <img src="assets/images/EC8128DA-5A25-44CC-8D09-D3D1222A4132.jpeg" alt="爷爷的照片">
+          </div>
+          <div class="music">
+            <strong>爷爷喜欢的歌</strong><br>
+            《山丹丹开花红艳艳》 · 《刘三姐》选段
+            <div class="note">手机通常需要手动点击播放。把音乐文件放到 <b>assets/music/</b>，并在代码里替换文件名即可。</div>
+            <!-- 上传音乐后，把下面 src 的文件名改成你的音乐文件名，例如 assets/music/song.mp3 -->
+            <audio controls preload="none">
+              <source src="assets/music/song.mp3" type="audio/mpeg">
+              您的浏览器暂不支持音频播放。
+            </audio>
+          </div>
+          <div class="divider"></div>
+          <p class="quote">
+            纵有万般不舍，也愿您一路安宁。<br>
+            愿天堂没有病痛，愿岁月永远温柔。<br>
+            思念不曾远去，爱也从未离开。<br>
+            我们永远怀念您。
+          </p>
+        </div>
+      </article>
+    </section>
+    <footer>扫一扫，看看爷爷留下的美好时光</footer>
+  </main>
+  <script>
+    const slides = document.querySelectorAll('#slideshow img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4200);
+  </script>
+</body>
+</html>
